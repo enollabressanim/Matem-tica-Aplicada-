@@ -227,7 +227,7 @@ def main () :
         angulo2 = math.degrees(beta)
         gamma=math.acos((pow(a, 2)+pow(b, 2)-pow(c, 2))/(2*a*b))
         angulo3 = math.degrees(gamma)
-        print("angulo 1: ", angulo1, "\nangulo 2: ", angulo2, "\nangulo 3: ", angulo3)
+        print("angulo 1: ", "%.6f" % angulo1, "\nangulo 2: ", "%.6f" % angulo2, "\nangulo 3: ", "%.6f" % angulo3)
         return angulo1, angulo2, angulo3
 
     def descobrir_angulo_com_lados(b, c, alpha):
@@ -236,12 +236,12 @@ def main () :
         angulo2 = math.degrees(beta)
         gamma=math.acos((pow(a, 2)+pow(b, 2)-pow(c, 2))/(2*a*b))
         angulo3 = math.degrees(gamma)
-        print("angulo 1: ", alpha, "\nangulo 2: ", angulo2, "\nangulo 3:", angulo3)
+        print("angulo 1: ", "%.6f" % alpha, "\nangulo 2: ", "%.6f" % angulo2, "\nangulo 3:", "%.6f" % angulo3)
         return angulo2, angulo3
 
     def descobrir_angulo(a, b):
         angulo = 180 - (a + b)
-        print(angulo)
+        print("%.6f" % angulo)
         return angulo 
 
     def descobrir_hipotenusa(lado1, lado2):
@@ -256,13 +256,13 @@ def main () :
         anguloA = 180 - (B + C)
         ladoB = a * math.sin(math.radians(B)) / math.sin(math.radians(anguloA))
         ladoC =  a * math.sin(math.radians(C)) / math.sin(math.radians(anguloA))
-        print("Lado A:",a,"\nLado B: ", ladoB, "\nLado C:", ladoC)
+        print("Lado A:", "%.6f" % a,"\nLado B: ", "%.6f" % ladoB, "\nLado C:", "%.6f" % ladoC)
         return ladoB, ladoC
 
     def descobrir_area(lado1, lado2, lado3):
         p = (lado1 + lado2 + lado3) / 2
         a = math.sqrt(p*(p - lado1)*(p - lado2)*(p - lado3))
-        print("Área: ", a)
+        print("Área: ", "%.6f" % a)
         return a
 
     imprimir_menu()
@@ -288,14 +288,14 @@ def main () :
                 lado1 = float(input("Digite o valor do primeiro cateto: "))
                 lado2 = float(input("Digite o valor do segundo cateto: "))
                 angulo = input("Insira o angulo: ")
-                print(descobrir_hipotenusa(lado1, lado2))
+                print("%.6f" % descobrir_hipotenusa(lado1, lado2))
                 break
 
             elif opcao2 == "C":
                 lado1 = float(input("Digite o valor da hipotenusa: "))
                 lado2 = float(input("Digite o valor de um dos cateto: "))
                 angulo = input("Insira o angulo: ")
-                print(descobrir_cateto(lado1, lado2))
+                print("%.6f" % descobrir_cateto(lado1, lado2))
                 break
 
         elif opcao == "4":
