@@ -54,6 +54,16 @@ def main () :
             print("amplitude: ", b)
         else:
             print("amplitude: ", b)
+    
+    def periodo_tan(c):
+        if c < 0:
+            c = c * -1
+            periodo = math.pi/c
+            print("período: ", periodo)
+        else:
+            periodo = math.pi/c
+            print("período: ", periodo)    
+
 
     menu()
     opcao = input("digite a opcao desejada: ")
@@ -79,7 +89,15 @@ def main () :
         imagem_cosseno(a,b)
         amplitude_cosseno(b)
 
-    #elif opcao == "3":
+    elif opcao == "3":
+        print("Insira as variáveis da função:")
+        a = float(input("Insira o valor de a: "))
+        b = float(input("Insira o valor de b: "))
+        c = float(input("Insira o valor de c: "))
+        d = float(input("Insira o valor de d: "))
+        print("a função que você inseriu é: y = ", a,"+", b, "* sen(", c, " * x", "+", d, ")")
+        periodo_tan(c)
+
 
 
 if __name__ =='__main__':
